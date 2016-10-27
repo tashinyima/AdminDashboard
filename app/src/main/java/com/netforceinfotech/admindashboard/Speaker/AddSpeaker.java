@@ -288,7 +288,7 @@ public class AddSpeaker extends AppCompatActivity implements View.OnClickListene
         }
         return path;
     }
-
+//SaveBit Map is just another version
     private File savebitmap(String filePath) {
         File file = new File(filePath);
         String extension = filePath.substring(filePath.lastIndexOf(".") + 1, filePath.length());
