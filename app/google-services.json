@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "466941104200",
+    "firebase_url": "https://admindashboard-54f26.firebaseio.com",
+    "project_id": "admindashboard-54f26",
+    "storage_bucket": "admindashboard-54f26.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:466941104200:android:8c814742359c895e",
+        "android_client_info": {
+          "package_name": "com.netforceinfotech.admindashboard"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "466941104200-8ja7sto6cbk952o6tu07j766us275v56.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAqpuUlS8nXqgn0r8zLS2vF3n1XIATm0BY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

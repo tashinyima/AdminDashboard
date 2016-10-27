@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<string name="cat">choose Category </string>
+    <string-array name="Category_List">
+    <item>Education</item>
+     <item>Sports</item>
+        <item>Religion</item>
+        <item>Health Care</item>
+        <item>Idea</item>
+        <item>Science</item>
+        <item>Politics</item>
+        <item>Women</item>
+        <item>Wonders</item>
+
+    </string-array>
+</resources>
