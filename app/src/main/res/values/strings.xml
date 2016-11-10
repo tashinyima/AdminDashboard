@@ -2,5 +2,7 @@
     <string name="app_name">AdminDashboard</string>
     <string name="title_activity_category">Category</string>
     <string name="speakerList">Choose Speaker</string>
+    <string name="choseCat">Select Category</string>
+    <string name="selectSpeaker">Select Speaker</string>
 </resources>
 

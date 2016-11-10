@@ -17,9 +17,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
@@ -33,6 +35,7 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.OutputStream;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
@@ -55,6 +58,7 @@ public class AddSpeaker extends AppCompatActivity implements View.OnClickListene
     private EditText nameEditText;
     private EditText description;
     private EditText birthplace;
+    private Spinner priority;
 
 
 
@@ -69,8 +73,14 @@ public class AddSpeaker extends AppCompatActivity implements View.OnClickListene
         nameEditText = (EditText) findViewById(R.id.nameEditText);
         description = (EditText) findViewById(R.id.descriptionEditText);
         birthplace = (EditText) findViewById(R.id.birthplaceEditText);
+        priority = (Spinner) findViewById(R.id.prioritySpinner);
 
-        //Wait here
+        String[] items = new String[]{"1", "2", "3","4","5"};
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, items);
+        priority.setAdapter(adapter);
+
+
+                //Wait here
         databaseReference = firebaseDatabase.getReference();
         submitButton = (Button) findViewById(R.id.submitButton);
         submitButton.setOnClickListener(this);
@@ -116,24 +126,24 @@ public class AddSpeaker extends AppCompatActivity implements View.OnClickListene
     private void SpeakerInformation() {
 
 
-
-
         String name = nameEditText.getText().toString().trim();
         String des = description.getText().toString().trim();
         String  dob = birthdayEditText.getText().toString().trim();
         String birth = birthplace.getText().toString().trim();
+        String prior= priority.getSelectedItem().toString();
 //        ImageView img = imageViewDp.getDrawable();
 
         // get Image URL ...
 
-        SpeakerInformation speaker = new SpeakerInformation(name,birth,des,dob);
+        SpeakerInformation speaker = new SpeakerInformation(name,birth,dob,des,prior);
 
 //        databaseReference.setValue(speaker);
 
         // Push function is for saving and storing an array of data...
 
 
-        databaseReference.child("Speaker").push().setValue(speaker);
+
+        databaseReference.child("Speakers").push().setValue(speaker);
 
 
 

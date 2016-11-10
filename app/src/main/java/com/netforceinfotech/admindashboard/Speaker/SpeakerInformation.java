@@ -13,6 +13,7 @@ public class SpeakerInformation {
     public String birthplace;
     public String dob;
     public String description;
+    public String priority;
 //    public Image profileimage;
 
     public  SpeakerInformation()
@@ -21,11 +22,12 @@ public class SpeakerInformation {
 
     }
 
-    public SpeakerInformation(String name, String birthplace, String dob, String description) {
+    public SpeakerInformation(String name, String birthplace, String dob, String description, String priority ) {
         this.name = name;
         this.birthplace = birthplace;
         this.dob = dob;
         this.description = description;
+        this.priority=priority;
 //        this.profileimage = profileimage;
     }
 

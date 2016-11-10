@@ -22,6 +22,7 @@
 
   <EditText
       android:hint="Name"
+      android:inputType="textCapWords"
       android:id="@+id/nameEditText"
       android:layout_width="match_parent"
       android:layout_height="wrap_content" />
@@ -30,6 +31,7 @@
   <EditText
       android:id="@+id/dobEditText"
       android:hint="Choose Birthday"
+      android:inputType="textCapWords"
       android:clickable="true"
       android:focusable="false"
       android:layout_width="match_parent"
@@ -38,8 +40,16 @@
   <EditText
       android:id="@+id/birthplaceEditText"
       android:hint="Birth Place"
+      android:inputType="textCapWords"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"/>
+
+  <Spinner
+      android:id="@+id/prioritySpinner"
+      android:hint="Choose Priority "
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:spinnerMode="dropdown"/>
 
   <EditText
       android:id="@+id/descriptionEditText"
@@ -48,7 +58,7 @@
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:hint="Description....."
-      android:inputType="text|textMultiLine"/>
+      android:inputType="text|textMultiLine|textCapWords"/>
 
 
   <Button

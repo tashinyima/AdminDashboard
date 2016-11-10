@@ -15,6 +15,7 @@
 
         <EditText
             android:id="@+id/titleEditText"
+            android:inputType="textCapWords"
             android:hint="Add Title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
@@ -26,21 +27,59 @@
             android:focusable="false"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
-        <EditText
-            android:id="@+id/locationEditText"
-            android:hint="Add Location"
-            android:layout_width="match_parent"
+
+    <EditText
+        android:id="@+id/locationEditText"
+        android:hint="Add Location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+<LinearLayout
+    android:orientation="horizontal"
+    android:weightSum="3"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:text="@string/choseCat"
+        android:textSize="18sp"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content" />
+    <Spinner
+        android:layout_weight="2"
+        android:id="@+id/categorySpinner"
+        android:layout_width="0dp"
+        android:padding="10dp"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:weightSum="3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:text="@string/selectSpeaker"
+            android:textSize="18sp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
             android:layout_height="wrap_content" />
 
+      <Spinner
+        android:id="@+id/speakerSpinner"
+        android:layout_width="0dp"
+        android:layout_weight="2"
+        android:padding="10dp"
+        android:layout_height="wrap_content"/>
 
-        <Spinner
-            android:id="@+id/categorySpinner"
-            android:layout_width="match_parent"
-            android:padding="10dp"
-            android:layout_height="wrap_content"/>
+        </LinearLayout>
 
 
-        <EditText
+    <EditText
             android:id="@+id/descriptionEditText"
             android:hint="Add Description"
             android:lines="4"
@@ -56,8 +95,8 @@
 
         <Button
             android:layout_marginTop="10dp"
-            android:id="@+id/submitVideoButton"
-            android:text="submit Video"
+            android:id="@+id/submitContent"
+            android:text="Submit Content"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 

@@ -40,6 +40,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             Intent i = new Intent(MainActivity.this,Category.class);
 
             startActivity(i);
+
         } else if(v.getId()==R.id.speakerButton){
 
             Intent i = new Intent(MainActivity.this,Speaker.class);
